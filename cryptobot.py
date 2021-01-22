@@ -1,7 +1,7 @@
 
 ''' 
 CryptoBot
-Version 1.1
+Version 1.2
 
 "A smarter crypto bot for Discord channels" created by TechnoEquinox"
 
@@ -26,6 +26,15 @@ import discord
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '?')
+
+file = open('config.txt', 'r')
+token = ''
+
+try:
+    token = file.readline()
+except:
+    print('An error occured opening "config.txt". Check that the file is in the same directory as "cryptobot.py"')
+
 
 @client.event
 async def on_ready():
@@ -134,10 +143,10 @@ async def on_message(message):
     elif message.content.startswith('?help') or message.content.startswith('?HELP'):
         #BTC - ETH - BCH - LTC - EOS - BAT - XRP - XLM - ETC - ZEC - ZRX - XTZ
         channel = message.channel
-        await channel.send("```CryptoBot v1.1\nCreated by TechnoEquinox\nPlease report bugs on Github: coming soon\n\nKnown Issues:\n- Some coins may display values beyond two decimal places in certain conditions.\n- Using a single '?' is read as searching for an invalid ticker symbol when it may be used in a different context.\n\nCurrently Supported Currencies:\nBitcoin (BTC) - Ethereum (ETH) - Bitcoin Cash (BCH) - Litecoin (LTC) - EOS - Basic Attention Token (BAT) - XRP - Stellar Lumens (XLM) - Ethereum Classic (ETC) - Zcash (ZEC) - 0x (ZRX) - Tezos (XTZ)```")
-    elif message.content.startswith('?'):
-        channel = message.channel
-        await channel.send("```That cryptocurrency is either not valid, or is not supported at this time. (Try: ?help)```")
+        await channel.send("```CryptoBot v1.1\nCreated by TechnoEquinox\nPlease report bugs on Github: https://github.com/TechnoEquinox/CryptoBot\n\nKnown Issues:\n- Some coins may display values beyond two decimal places in certain conditions.\n\nCurrently Supported Currencies:\nBitcoin (BTC) - Ethereum (ETH) - Bitcoin Cash (BCH) - Litecoin (LTC) - EOS - Basic Attention Token (BAT) - XRP - Stellar Lumens (XLM) - Ethereum Classic (ETC) - Zcash (ZEC) - 0x (ZRX) - Tezos (XTZ)```")
+    else:
+        pass
+        
 
         
 def get_price_str(raw, coin):
@@ -179,6 +188,5 @@ def get_day_price_change(price, open_price):
         output = '- ' + str(abs(day_price_change)) + '%'
     return output
     
-# --- Input your Discord Bot token here ---
-client.run('YOUR TOKEN HERE')
+client.run(token)
     
