@@ -1,4 +1,4 @@
-# CryptoBot v1.2
+# CryptoBot v1.2.1
 A Discord Bot written in Python 3 that provides price data about supported Crypto Currencies. This script is intended to be a simple tool used for those interested
 in keeping track of the most popular cryptocurrencies without the need to leave Discord. The bot provides the current price, 24 hour percent change, 1 hour high and
 lows, and 24 hour high and lows. 
@@ -7,9 +7,10 @@ Setup is easy and is explained in the documentation below. New features will con
 any bugs you have found. 
 
 ## Changelog
-- Fixed an issue that caused an out of context '?' to be read as invalid input
-- Added better handling of the bot token so it does not need to be put into the source code
-- Updated the `?help` command with relevant version number and link to GitHub page
+- Added shell scripting for easier use in server automation
+- Changed output when script successfully connects to Discord
+- Added console logging when a user makes a query 
+- Attempted to fix a known issue with the rounding of some values. Issue is still present but has been mitigated
 
 ## Setup and Configuration
 1: Log into `www.discord.com/developers/` with your Discord credentials 
