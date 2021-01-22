@@ -143,7 +143,7 @@ async def on_message(message):
     elif message.content.startswith('?help') or message.content.startswith('?HELP'):
         #BTC - ETH - BCH - LTC - EOS - BAT - XRP - XLM - ETC - ZEC - ZRX - XTZ
         channel = message.channel
-        await channel.send("```CryptoBot v1.1\nCreated by TechnoEquinox\nPlease report bugs on Github: https://github.com/TechnoEquinox/CryptoBot\n\nKnown Issues:\n- Some coins may display values beyond two decimal places in certain conditions.\n\nCurrently Supported Currencies:\nBitcoin (BTC) - Ethereum (ETH) - Bitcoin Cash (BCH) - Litecoin (LTC) - EOS - Basic Attention Token (BAT) - XRP - Stellar Lumens (XLM) - Ethereum Classic (ETC) - Zcash (ZEC) - 0x (ZRX) - Tezos (XTZ)```")
+        await channel.send("```CryptoBot v1.2\nCreated by TechnoEquinox\nPlease report bugs on Github: https://github.com/TechnoEquinox/CryptoBot\n\nKnown Issues:\n- Some coins may display values beyond two decimal places in certain conditions.\n\nCurrently Supported Currencies:\nBitcoin (BTC) - Ethereum (ETH) - Bitcoin Cash (BCH) - Litecoin (LTC) - EOS - Basic Attention Token (BAT) - XRP - Stellar Lumens (XLM) - Ethereum Classic (ETC) - Zcash (ZEC) - 0x (ZRX) - Tezos (XTZ)```")
     else:
         pass
         
