@@ -6,6 +6,11 @@ lows, and 24 hour high and lows.
 Setup is easy and is explained in the documentation below. New features will continued to be developed as the code is maintained. Please feel free to submit
 any bugs you have found. 
 
+## Changelog
+- Fixed an issue that caused an out of context '?' to be read as invalid input
+- Added better handling of the bot token so it does not need to be put into the source code
+- Updated the `?help` command with relevant version number and link to GitHub page
+
 ## Setup and Configuration
 1: Log into `www.discord.com/developers/` with your Discord credentials 
 
