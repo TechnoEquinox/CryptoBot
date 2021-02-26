@@ -47,7 +47,7 @@ fi
 cd ~/CryptoBot_dev
 # Check for local file to find country 
 echo -e "Checking for local file..."
-LOCAL_FILE=~/CryptoBot_dev/local.txt
+LOCAL_FILE=~/CryptoBot/local.txt
 if ! [ -f "$LOCAL_FILE" ]; then
     echo -e "${red}$LOCAL_FILE does not exist. Creating...${reset}"
     touch ~/CryptoBot_dev/local.txt
@@ -63,7 +63,7 @@ fi
 echo -e "Checking for config file..."
 # Checks if config.txt is not present
 # Prompts for token after creating file
-FILE=~/CryptoBot_dev/config.txt
+FILE=~/CryptoBot/config.txt
 if ! [ -f "$FILE" ]; then
     echo -e "${red}$FILE does not exist. Creating...${reset}"
     touch ~/CryptoBot_dev/config.txt

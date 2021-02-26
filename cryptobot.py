@@ -447,7 +447,7 @@ async def on_message(message):
     elif message.content.startswith('?help') or message.content.startswith('?HELP'):
         #BTC - ETH - BCH - LTC - EOS - BAT - XRP - XLM - ETC - ZEC - ZRX - XTZ - COMP - UNI
         channel = message.channel
-        await channel.send("```CryptoBot v2.0 (experimental)\nCreated by TechnoEquinox\nPlease report bugs on Github: https://github.com/TechnoEquinox/CryptoBot\n\nKnown Issues:\n-U.S.A. is the only supported local at this time. Other locals will be added in later versions.\n-Server side logging of querries is broken\n\nHow To Use:\n-To querry the price data on a coin: ?[coin symbol]\n-To querry Daily Recap: ?recap or ?RECAP \n\nCurrently Supported Currencies:```" + "https://help.coinbase.com/en/coinbase/trading-and-funding/cryptocurrency-trading-pairs/supported-cryptocurrencies")
+        await channel.send("```CryptoBot v2.0\nCreated by TechnoEquinox\nPlease report bugs on Github: https://github.com/TechnoEquinox/CryptoBot\n\nKnown Issues:\n-U.S.A. is the only supported local at this time. Other locals will be added in later versions.\n-Server side logging of querries is broken\n\nHow To Use:\n-To querry the price data on a coin: ?[coin symbol]\n-To querry Daily Recap: ?recap or ?RECAP \n\nCurrently Supported Currencies:```" + "https://help.coinbase.com/en/coinbase/trading-and-funding/cryptocurrency-trading-pairs/supported-cryptocurrencies")
         print("User queried ?help")
     elif message.content.startswith('?recap') or message.content.startswith('?RECAP') or message.content.startswith('?Recap'):
         coin = 'Daily Recap'
