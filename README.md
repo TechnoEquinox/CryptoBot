@@ -1,4 +1,4 @@
-# CryptoBot v1.2.1
+# CryptoBot v2.0
 A Discord Bot written in Python 3 that provides price data about supported Crypto Currencies. This script is intended to be a simple tool used for those interested
 in keeping track of the most popular cryptocurrencies without the need to leave Discord. The bot provides the current price, 24 hour percent change, 1 hour high and
 lows, and 24 hour high and lows. 
@@ -7,10 +7,11 @@ Setup is easy and is explained in the documentation below. New features will con
 any bugs you have found. 
 
 ## Changelog
-- Added shell scripting for easier use in server automation
-- Changed output when script successfully connects to Discord
-- Added console logging when a user makes a query 
-- Attempted to fix a known issue with the rounding of some values. Issue is still present but has been mitigated
+- Added support for all tradable cryptocurrencies on Coinbase (U.S. region only)
+- Added daily recap feature which will querry all coins on Coinbase to show the top 3 and bottom 3 coins over 24 hours
+- Rewrote the launcher shell script to assist in inital setup
+- Launcher now checks to make sure required dependencies are in the right place 
+- Added a more helpful help menu 
 
 ## Setup and Configuration
 1: Log into `www.discord.com/developers/` with your Discord credentials 
@@ -23,25 +24,11 @@ If you need additional help getting this information, RealPython has a great gui
 
 4: Log into the machine you wish to run this script off of. We recommend running this script on Ubuntu 18.04 or later. This script has not been tested on other distributions but should continue to work as long as Python 3 is installed. 
 
-5: Verify Python 3 is installed using
-`python3 --version`
+5. Clone this repository using the git command: `git clone https://github.com/TechnoEquinox/CryptoBot`
 
-If it is not installed, install using
-`sudo apt install python3`
+6. Enter the `CryptoBot/` directory and run the launcher: `./cryptobot.sh`
 
-6: Install the cryptocompare python package. This is used to query price data for the script:
-`pip3 install cryptocompare`
-
-7: Install the Discord API:
-`pip3 install -U discord.py`
-
-8: Install CryptoBot by cloning the repository:
-`git clone https://github.com/TechnoEquinox/CryptoBot`
-
-9: Navigate to the created CryptoBot directory and run the following command:
-`touch config.txt`
-
-Open this file in your text editor and paste the token from Discord into this file. Leave the text on the first line and do not add anything else other than the token to this file. 
+7. Follow the set up process that is prompted.
 
 ## Running CryptoBot
 If you've successfully followed the **Setup and Configuration** without any errors, then you can run the file with the following command:
@@ -52,18 +39,11 @@ Using CryptoBot is easy! The prefix used to talk to the Bot is the '?'. After th
 
 **Example:** `?btc` or `?BTC`
 
+If you want to querry the daily recap, use the recap command and the bot will handle the rest!
+
+**Example** `?recap` or `?RECAP`
+
 If you need help, use the `?help` command. 
 
-This is the current list of supported currencies with more to be added in the future:
-- Bitcoin (BTC) 
-- Ethereum (ETH) 
-- Bitcoin Cash (BCH) 
-- Litecoin (LTC)
-- EOS 
-- Basic Attention Token (BAT) 
-- XRP 
-- Stellar Lumens (XLM) 
-- Ethereum Classic (ETC) 
-- Zcash (ZEC) 
-- 0x (ZRX) 
-- Tezos (XTZ)
+Find a list of all the supported cryptocurrencies here: 
+https://help.coinbase.com/en/coinbase/trading-and-funding/cryptocurrency-trading-pairs/supported-cryptocurrencies
